@@ -4,6 +4,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        Menu menu = new Menu();
+
+        int response = 0;
+
+        while (response != 5)
+        {
+            response = menu.DisplayMenu();
+
+            Goal myGoal = new Goal("Run", "Run alot faster");
+            Console.WriteLine(myGoal.GetConsoleString());
+
+        }
     }
 }
